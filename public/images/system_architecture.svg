@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="100%" height="100%" style="background:#0b1120; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF385C"/>
+      <stop offset="100%" stop-color="#E00B41"/>
+    </linearGradient>
+    <linearGradient id="tier1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="glowLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#f43f5e"/>
+    </linearGradient>
+    
+    <!-- Filter for glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+
+    <!-- Marker Arrow -->
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#38bdf8"/>
+    </marker>
+    <marker id="arrowRose" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#f43f5e"/>
+    </marker>
+    <marker id="arrowGreen" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 10 5 L 0 9 z" fill="#10b981"/>
+    </marker>
+  </defs>
+
+  <!-- Background Grid Pattern -->
+  <g opacity="0.05">
+    <path d="M 0 100 L 1400 100 M 0 200 L 1400 200 M 0 300 L 1400 300 M 0 400 L 1400 400 M 0 500 L 1400 500 M 0 600 L 1400 600 M 0 700 L 1400 700 M 0 800 L 1400 800" stroke="#ffffff" stroke-width="1"/>
+    <path d="M 100 0 L 100 900 M 200 0 L 200 900 M 300 0 L 300 900 M 400 0 L 400 900 M 500 0 L 500 900 M 600 0 L 600 900 M 700 0 L 700 900 M 800 0 L 800 900 M 900 0 L 900 900 M 1000 0 L 1000 900 M 1100 0 L 1100 900 M 1200 0 L 1200 900 M 1300 0 L 1300 900" stroke="#ffffff" stroke-width="1"/>
+  </g>
+
+  <!-- Title & Top Badge -->
+  <rect x="50" y="25" width="1300" height="60" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <circle cx="85" cy="55" r="16" fill="#FF385C"/>
+  <path d="M 85 45 C 80 50, 76 56, 76 60 C 76 65, 80 68, 85 68 C 90 68, 94 65, 94 60 C 94 56, 90 50, 85 45 Z" fill="#ffffff"/>
+  <text x="115" y="61" font-size="20" font-weight="700" fill="#ffffff">Production-Scale Vacation-Rental Marketplace Architecture</text>
+  <rect x="1110" y="40" width="220" height="30" rx="15" fill="#0f172a" stroke="#FF385C" stroke-width="1"/>
+  <text x="1220" y="60" font-size="12" font-weight="600" fill="#FF385C" text-anchor="middle">100M+ MAU · 99.99% SLA</text>
+
+  <!-- TIER 1: Global Client & Edge Layer -->
+  <g transform="translate(50, 105)">
+    <rect width="1300" height="100" rx="12" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#38bdf8" letter-spacing="1">1. GLOBAL CLIENT &amp; EDGE LAYER</text>
+    
+    <!-- Clients -->
+    <rect x="25" y="45" width="220" height="42" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="135" y="70" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">Web &amp; Mobile Clients (iOS / Android)</text>
+    
+    <!-- Cloudflare Edge -->
+    <rect x="300" y="45" width="970" height="42" rx="8" fill="#0f172a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="785" y="70" font-size="13" font-weight="600" fill="#38bdf8" text-anchor="middle">Cloudflare Anycast CDN &amp; WAF (300+ Edge POPs · DDoS Shield · WebP/AVIF Auto-Optimization)</text>
+  </g>
+
+  <!-- TIER 2: Frontend & Edge Compute -->
+  <g transform="translate(50, 225)">
+    <rect width="1300" height="100" rx="12" fill="#1e293b" stroke="#818cf8" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#818cf8" letter-spacing="1">2. FRONTEND &amp; EDGE COMPUTE TIER</text>
+    
+    <rect x="25" y="45" width="400" height="42" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="225" y="70" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">Edge Workers (Geo-Routing / A/B Split)</text>
+
+    <rect x="450" y="45" width="820" height="42" rx="8" fill="#0f172a" stroke="#818cf8" stroke-width="1"/>
+    <text x="860" y="70" font-size="13" font-weight="600" fill="#c7d2fe" text-anchor="middle">Next.js SSR / ISR Cluster (React 19 Server Components · Streaming HTML · TTFB &lt; 80ms)</text>
+  </g>
+
+  <!-- TIER 3: Gateway & BFF Tier -->
+  <g transform="translate(50, 345)">
+    <rect width="1300" height="100" rx="12" fill="#1e293b" stroke="#c084fc" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#c084fc" letter-spacing="1">3. API GATEWAY &amp; BFF TIER</text>
+
+    <rect x="25" y="45" width="600" height="42" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="325" y="70" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">Envoy Proxy Gateway (mTLS · Token-Bucket Rate Limiter · Circuit Breaking)</text>
+
+    <rect x="650" y="45" width="620" height="42" rx="8" fill="#0f172a" stroke="#c084fc" stroke-width="1"/>
+    <text x="960" y="70" font-size="13" font-weight="600" fill="#e9d5ff" text-anchor="middle">GraphQL BFF / Federated Gateway (Schema Stitching · DataLoader Deduplication)</text>
+  </g>
+
+  <!-- TIER 4: Core Microservices -->
+  <g transform="translate(50, 465)">
+    <rect width="1300" height="120" rx="12" fill="#1e293b" stroke="#f43f5e" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#f43f5e" letter-spacing="1">4. CORE MICROSERVICES CLUSTER (KUBERNETES EKS · gRPC INTERNAL)</text>
+
+    <!-- Services -->
+    <rect x="25" y="45" width="195" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="122" y="70" font-size="13" font-weight="700" fill="#fda4af" text-anchor="middle">Listing Service</text>
+    <text x="122" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Metadata · Media · Host</text>
+
+    <rect x="235" y="45" width="205" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5"/>
+    <text x="337" y="70" font-size="13" font-weight="700" fill="#ff4d6d" text-anchor="middle">Booking Engine</text>
+    <text x="337" y="88" font-size="11" fill="#fecdd3" text-anchor="middle">Redlock · Concurrency</text>
+
+    <rect x="455" y="45" width="195" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="552" y="70" font-size="13" font-weight="700" fill="#fda4af" text-anchor="middle">Search &amp; Ranking</text>
+    <text x="552" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Uber H3 Geo-Hex Index</text>
+
+    <rect x="665" y="45" width="195" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="762" y="70" font-size="13" font-weight="700" fill="#fda4af" text-anchor="middle">Pricing Engine</text>
+    <text x="762" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Dynamic Rates · FX Rates</text>
+
+    <rect x="875" y="45" width="195" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="972" y="70" font-size="13" font-weight="700" fill="#fda4af" text-anchor="middle">Review Service</text>
+    <text x="972" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Sentiment · Ratings</text>
+
+    <rect x="1085" y="45" width="185" height="55" rx="8" fill="#0f172a" stroke="#f43f5e" stroke-width="1"/>
+    <text x="1177" y="70" font-size="13" font-weight="700" fill="#fda4af" text-anchor="middle">Payment &amp; Escrow</text>
+    <text x="1177" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Stripe · Ledger · Payouts</text>
+  </g>
+
+  <!-- TIER 5: Persistence & Caching -->
+  <g transform="translate(50, 605)">
+    <rect width="1300" height="120" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#10b981" letter-spacing="1">5. DATA PERSISTENCE &amp; IN-MEMORY CACHING TIER</text>
+
+    <rect x="25" y="45" width="240" height="55" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="145" y="70" font-size="13" font-weight="700" fill="#6ee7b7" text-anchor="middle">PostgreSQL Aurora Primary</text>
+    <text x="145" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Write Cluster · Range Partitioned</text>
+
+    <rect x="280" y="45" width="240" height="55" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="400" y="70" font-size="13" font-weight="700" fill="#6ee7b7" text-anchor="middle">PostgreSQL Read Replicas</text>
+    <text x="400" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Multi-AZ · 95% Read Offload</text>
+
+    <rect x="535" y="45" width="240" height="55" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1.5"/>
+    <text x="655" y="70" font-size="13" font-weight="700" fill="#34d399" text-anchor="middle">Redis Enterprise Cluster</text>
+    <text x="655" y="88" font-size="11" fill="#a7f3d0" text-anchor="middle">365-Day Bitmaps · Redlock Lock</text>
+
+    <rect x="790" y="45" width="240" height="55" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="910" y="70" font-size="13" font-weight="700" fill="#6ee7b7" text-anchor="middle">OpenSearch / ES Cluster</text>
+    <text x="910" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">H3 Hex Geospatial &amp; k-NN Vectors</text>
+
+    <rect x="1045" y="45" width="225" height="55" rx="8" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+    <text x="1157" y="70" font-size="13" font-weight="700" fill="#6ee7b7" text-anchor="middle">AWS S3 Multi-Region</text>
+    <text x="1157" y="88" font-size="11" fill="#94a3b8" text-anchor="middle">Original Photos &amp; CDN Origin</text>
+  </g>
+
+  <!-- TIER 6: Event Streaming & Async -->
+  <g transform="translate(50, 745)">
+    <rect width="1300" height="110" rx="12" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" fill-opacity="0.8"/>
+    <text x="25" y="30" font-size="13" font-weight="700" fill="#f59e0b" letter-spacing="1">6. EVENT STREAMING &amp; ASYNCHRONOUS PROCESSING TIER</text>
+
+    <rect x="25" y="45" width="380" height="48" rx="8" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+    <text x="215" y="73" font-size="13" font-weight="700" fill="#fcd34d" text-anchor="middle">Apache Kafka Bus (BookingCreated · Audit Log)</text>
+
+    <rect x="435" y="45" width="410" height="48" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="640" y="73" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">Notification Workers (Email · SMS · Push Alerts)</text>
+
+    <rect x="875" y="45" width="395" height="48" rx="8" fill="#0f172a" stroke="#475569" stroke-width="1"/>
+    <text x="1072" y="73" font-size="13" font-weight="600" fill="#f8fafc" text-anchor="middle">Analytics &amp; Data Lake (Snowflake / BigQuery)</text>
+  </g>
+
+  <!-- Flow Connectors -->
+  <line x1="700" y1="205" x2="700" y2="225" stroke="#38bdf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="325" x2="700" y2="345" stroke="#818cf8" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="700" y1="445" x2="700" y2="465" stroke="#c084fc" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="387" y1="585" x2="387" y2="605" stroke="#f43f5e" stroke-width="2" marker-end="url(#arrowRose)"/>
+  <line x1="705" y1="585" x2="705" y2="605" stroke="#10b981" stroke-width="2" marker-end="url(#arrowGreen)"/>
+  <line x1="387" y1="725" x2="387" y2="745" stroke="#f59e0b" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

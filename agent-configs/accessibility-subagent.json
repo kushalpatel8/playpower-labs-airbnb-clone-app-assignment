@@ -1,0 +1,16 @@
+{
+  "name": "AccessibilitySubagent",
+  "version": "1.0.0",
+  "description": "Autonomous AI subagent responsible for auditing keyboard navigation, focus management, ARIA accessibility, and screen reader labels.",
+  "parameters": {
+    "wcagStandard": "WCAG2.1-AA",
+    "requiredKeys": ["ArrowLeft", "ArrowRight", "Escape", "Enter", "Space"],
+    "enforceAriaLabels": true,
+    "enforceImageAltText": true
+  },
+  "rules": [
+    "Ensure photo lightbox supports arrow key navigation and Escape key dismissal.",
+    "Ensure all dialog modals lock scroll and handle keyboard dismiss.",
+    "Ensure color contrast meets 4.5:1 ratio across all text elements."
+  ]
+}

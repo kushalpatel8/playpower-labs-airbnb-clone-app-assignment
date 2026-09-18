@@ -1,0 +1,18 @@
+{
+  "name": "CodeQualitySubagent",
+  "version": "1.0.0",
+  "description": "Autonomous AI subagent responsible for enforcing TypeScript strictness, Next.js 16 modular patterns, component boundaries, and zero-warning production builds.",
+  "parameters": {
+    "strictTypeScript": true,
+    "noUnusedVariables": true,
+    "enforceClientDirective": true,
+    "maxFileSizeBytes": 50000,
+    "componentDecoupling": true
+  },
+  "rules": [
+    "All components must be strongly typed with explicit interfaces.",
+    "Interactive UI states (modals, lightboxes, datepickers) must manage body overflow scroll cleanly.",
+    "Remote images must use next/image with proper sizes, priority flags for hero assets, and fill layout.",
+    "Build verification must pass with zero TypeScript compilation errors."
+  ]
+}
