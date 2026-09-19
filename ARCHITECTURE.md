@@ -6,7 +6,7 @@ This document presents a high-level system architecture and scaling strategy for
 
 ## 1. High-Level Architecture Diagram
 
-![Production System Architecture](./images/system_architecture.png)
+![Production System Architecture](./public/images/system_architecture.svg)
 
 ```mermaid
 flowchart TD
